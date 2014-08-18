@@ -32,7 +32,13 @@ define(['component/_CRUDComponent', 'controller/toolbarController', 'model/toolb
         name: 'referee',
         model: App.Model.RefereeModel,
         listModel: App.Model.RefereeList,
-        controller : App.Controller.RefereeController
+        controller : App.Controller.RefereeController,
+        postInit: function(){
+            var self = this;
+            Backbone.on(self.componentId + '-referee-show-clasification', function(params) {
+                self.componentController.clasification(params);
+            });
+        }
     });
     return App.Component.RefereeComponent;
 });
