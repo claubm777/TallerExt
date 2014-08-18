@@ -32,7 +32,13 @@ define(['component/_CRUDComponent', 'controller/toolbarController', 'model/toolb
         name: 'championShip',
         model: App.Model.ChampionShipModel,
         listModel: App.Model.ChampionShipList,
-        controller : App.Controller.ChampionShipController
+        controller : App.Controller.ChampionShipController,
+        postInit: function(){
+            var self = this;
+            Backbone.on(self.componentId + '-championship-show-duration-cost', function(params) {
+                self.componentController.durationCost(params);
+            });
+        }
     });
     return App.Component.ChampionShipComponent;
 });
