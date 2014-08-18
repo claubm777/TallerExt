@@ -11,6 +11,7 @@
 		 <th>Birth Date</th>
 		 <th>Enable</th>
 		 <th>Doc Number</th>
+                 <th>Clasification</th>
     <th>Actions</th>
     </tr>
     </thead>
@@ -24,6 +25,8 @@
 		<td><%= htmlEncode(referee.getDisplay('birthDate')) %></td>
 		<td><%= htmlEncode(referee.getDisplay('enable')) %></td>
 		<td><%= htmlEncode(referee.getDisplay('docNumber')) %></td>
+                <td><a onclick="Backbone.trigger('<%= componentId %>-referee-show-clasification',{ageOfExpirience:<%= htmlEncode(referee.getDisplay('ageOfExpirience')) %>,name:'<%= htmlEncode(referee.getDisplay('name')) %>'}); return false;" >Ver Clasificación</a></td>
+                        
     <td>
     <% if(showEdit) {%>
     <a onclick="Backbone.trigger('<%= componentId %>-referee-edit',{id:<%= referee.id %>}); return false" >Edit</a> |
