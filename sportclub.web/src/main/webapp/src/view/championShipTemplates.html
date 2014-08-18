@@ -7,6 +7,7 @@
 		 <th>Name</th>
 		 <th>Start Date</th>
 		 <th>End Date</th>
+                 <th>Calcular Duración y costo</th>
     <th>Actions</th>
     </tr>
     </thead>
@@ -16,6 +17,8 @@
 		<td><%= htmlEncode(championShip.getDisplay('name')) %></td>
 		<td><%= htmlEncode(championShip.getDisplay('startDate')) %></td>
 		<td><%= htmlEncode(championShip.getDisplay('endDate')) %></td>
+                <td><a onclick="Backbone.trigger('<%= componentId %>-championship-show-duration-cost',{startDate:'<%= htmlEncode(championShip.getDisplay('startDate')) %>',endDate:'<%= htmlEncode(championShip.getDisplay('endDate')) %>',name:'<%= htmlEncode(championShip.getDisplay('name')) %>'}); return false;" >Ver Duración y Costo</a></td>
+                        
     <td>
     <% if(showEdit) {%>
     <a onclick="Backbone.trigger('<%= componentId %>-championShip-edit',{id:<%= championShip.id %>}); return false" >Edit</a> |
