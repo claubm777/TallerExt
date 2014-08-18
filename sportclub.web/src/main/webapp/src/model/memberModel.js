@@ -35,25 +35,25 @@ define(['model/_memberModel'], function() {
             if(!attrs.name){
                 validationMessage = "The name can't be empty.";
             }
-            if(!attrs.firstName){
+            else if(!attrs.firstName){
                 validationMessage = "The first name can't be empty.";
             }
-            if(!attrs.lastName){
+            else if(!attrs.lastName){
                 validationMessage = "The last name can't be empty.";
             }
-            if(!attrs.birthDate){
+            else if(!attrs.birthDate){
                 validationMessage = "The birth date can't be empty";
             }
-            if(!attrs.enable){
-                validationMessage = "The enable can't be empty";
-            }
-            if(!attrs.docNumber){
+            //else if(!attrs.enable){
+            //    validationMessage = "The enable can't be empty";
+            //}
+            else if(!attrs.docNumber){
                 validationMessage = "The doc number can't be empty";
             }
-            if(!attrs.documenttypeId){
-                validationMessage = "The cocument type Id  can't be empty";
+            else if(!attrs.documenttypeId){
+                validationMessage = "The document type Id  can't be empty";
             }
-            if(!attrs.partnerId){
+            else if(!attrs.partnerId){
                 validationMessage = "The partner Id can't be empty";
             }
             if(validationMessage.length>0){
