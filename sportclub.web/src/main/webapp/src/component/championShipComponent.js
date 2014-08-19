@@ -38,6 +38,23 @@ define(['component/_CRUDComponent', 'controller/toolbarController', 'model/toolb
             Backbone.on(self.componentId + '-championship-show-duration-cost', function(params) {
                 self.componentController.durationCost(params);
             });
+              this.toolbarModel.set('createName', 'Crear');
+            this.toolbarModel.set('refreshName', 'Refrescar');
+            this.toolbarModel.set('showSearch', false);
+         
+              this.toolbarModel.set('showAddButton',true);
+                 this.toolbarModel.set('addName','Agregar');
+             
+           // this.toolbarModel.set('searchName', false);
+            this.toolbarModel.set('showPrint', false);
+            this.toolbarModel.set('title', 'Campeonato');
+            
+            //document.getElementById('name').innerHTML=('nombre');
+            
+          
+            this.addButton({name: "Idioma", icon: "glyphicon-question-sign", }, function() {
+                 self.componentController.estilo();
+            });
         }
     });
     return App.Component.ChampionShipComponent;

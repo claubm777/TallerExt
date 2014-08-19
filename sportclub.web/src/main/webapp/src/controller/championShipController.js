@@ -39,7 +39,16 @@ define(['controller/_championShipController','delegate/championShipDelegate'], f
             var duration=1+Math.abs(fecha2.getTime()-fecha1.getTime())/(1000*60*60*24);
             var costo=Math.exp(0.5*duration)
             alert('La duración del campeonato con nombre '+name+' es: ' + duration+', y el costo es '+costo);
+            
+        },
+        
+           estilo : function ()
+        {
+            alert('El idioma actual es Español') ;
+            
         }
+        
+        
     });
     return App.Controller.ChampionShipController;
 }); 

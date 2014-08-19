@@ -35,7 +35,7 @@ define(['component/_CRUDComponent', 'controller/toolbarController', 'model/toolb
         controller : App.Controller.StadiumController,
         postInit: function(){
             var self = this;
-            alert('aa');
+            
             Backbone.on(self.componentId + '-stadium-show-clasifications', function(params) {
                 
                 self.componentController.clasifications(params);

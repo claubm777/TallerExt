@@ -31,7 +31,7 @@ define(['controller/_stadiumController','delegate/stadiumDelegate'], function() 
     App.Controller.StadiumController = App.Controller._StadiumController.extend({
         
         clasifications: function(params){
-            alert('miiiiiimii');
+            
             var number = parseInt(params.capacity);
             var name = params.name;
             var categ="";
